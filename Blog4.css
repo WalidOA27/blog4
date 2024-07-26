@@ -1,0 +1,638 @@
+/*:nth of type (numerin)*/
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+  }
+
+body {
+    font-family: Inter, sans-serif; 
+    color: #333;
+    height: 100%;
+ 
+}
+
+*{
+    box-sizing: border-box;
+}
+
+/*________________________ALL____________________*/
+
+#with_trnansition{
+    transition: all .3s ease-in-out;
+
+}
+
+/*________________________HEADER_____________________*/
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    max-width: 100%;
+}
+
+/*header > *{
+    height: 46px;
+    width: 1240px;
+}*/
+    
+.container{
+    display: flex;
+    justify-content: space-between;
+    background-color: #333;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+
+}
+
+#desgracia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1240px;
+    max-width: 100%;
+}
+
+
+/*_____________________LEFT HEADER, SEARCH BAR, RIGHT HEADER_____________________________*/
+#inicio:hover, #canal:hover, #biblioteca:hover, #para_artistas:hover, #subir:hover{
+    color: white;
+}
+
+
+/*_____________________LEFT HEADER_____________________________*/
+.header_izq{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.logo{
+    display: flex;
+    
+}
+
+.logo img{
+    height: 46px;;
+    width: 69px;
+}
+
+#inicio, #canal, #biblioteca{
+    font-size: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    color: rgb(192, 192, 192);
+    font-family: Inter, sans-serif;
+    font-weight: 100;
+    line-height: 1.5;
+    border-right: 1px solid #111;
+    height: 46px;
+    padding: 15px 0px;
+}
+
+    /*ESTO DE ABAJO AHORA LO METO PORQUE NO SE COMO HAY ESPACIO ENTRE INICIO, CANAL, BIBLIOTECA*/
+#inicio{
+    padding-left:34px;
+    padding-right: 34px;
+}
+
+#biblioteca{
+    padding-left:20px;
+    padding-right: 20px;
+}
+
+#canal{
+    padding-left:32px;
+    padding-right: 32px;
+}
+
+/*_________________________CAMBIAR SI ES OTRA____________________________*/
+#inicio{
+    background-color: black;
+    color: white;
+}
+
+
+/*_____________________SEARCH BAR_____________________________*/
+
+.caja_buscar{
+    padding: 9px 10px;
+}
+
+.caja_buscar input{
+    color: #666;
+    outline: 0;
+    border: 0;
+    padding: 5px 7px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    width: 100%;
+    transition: ease-in-out;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+    height: 28px;
+    width: 258px;
+}
+
+.caja_buscar input:focus{
+    background-color: white;
+}
+
+
+#boton_caja{
+    position: relative;
+}
+
+#busqueda_boton{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+.caja_buscar button{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+      ),
+      url(src/Busqueda.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    right: 5px;
+    bottom: 6px;
+    height: 15px;
+    width: 15px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    background-color: #00000000;
+}
+
+/*_____________________RIGHT HEADER_____________________________*/
+
+.header_der{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    height: 46px;
+}
+
+#probar_go, #probar_next_pro, #para_artistas, #subir{
+    font-size: 14px;
+    padding: 12px 10px 12px 10px;
+    font-family: sans-serif;
+    font-weight: 100;
+    line-height: 1.5;
+
+}
+
+#probar_go, #probar_next_pro{
+    color: #f50;
+}
+
+#probar_go:hover, #probar_next_pro:hover{
+    color: #f70;
+}
+
+#para_artistas, #subir{
+    color: rgb(192, 192, 192);
+}
+
+#nav_der{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+#mail, #notificacion, #puntos{
+    height: 46px;
+    max-height: 100%;
+}
+
+#puntos_caja, #notificacion, #mail_caja{
+    box-sizing: border-box;
+}
+
+#perfil_y_flecha_caja{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 28px 10px 10px;
+}
+#perfil_y_flecha_caja{
+    position: relative;
+    box-sizing: border-box;
+}
+
+#perfil{
+    height: 26px;
+    max-height: 100%;
+    border-radius: 50%;
+}
+
+#flecha_hacia_abajo{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0)
+      ),
+      url(src/flecha-hacia-abajo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    right: 9px;
+    bottom: 16px;
+    height: 10px;
+    width: 10px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    position: absolute;
+}
+
+#perfil_y_flecha_caja button{
+    background-color: #00000000;
+}
+
+/*#flecha_hacia_abajo{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}*/
+
+
+/*
+#flecha_hacia_abajo{
+    position: absolute;
+    height: 10px;
+    right: 10px;
+    
+}
+*/
+
+/*emet*/
+
+/*____________________PLAYER__________________*/
+section.player_capa3{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    transform: translateY(0);
+    height: 48px;
+    visibility: visible;
+    transition: transform .2s ease-out;
+    transform: translateY(100%);
+    max-height: 100%;
+    background-color: #f2f2f2;
+    border-top: 1px solid #cecece;
+    margin: auto 0;
+    position: fixed;
+    bottom: 48px;
+    width: 100%;
+    align-items: center;
+}
+
+.player_capa2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    width: 1240px;
+    height: 48px;
+    bottom: 0px;
+}
+
+.player_capa1{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    font-size: 14px;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    width: 1240px;
+}
+
+.player_capa3 button{
+    background-color: #00000000;
+    border: none;
+}
+
+#atras{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/Volver_atras.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 48px;
+    width: 24px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+#parar{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/Pausa.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 48px;
+    width: 24px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+#despues{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/Seguir_adelante.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 48px;
+    width: 24px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+#alternar{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/alternar.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 48px;
+    width: 24px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+#caja_repetir{
+    display: flex;
+    height: 48px;
+}
+
+#repetir{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/Repetir.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 48px;
+    width: 24px;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+#atras, #parar, #despues{
+  margin-left: 12px;
+}
+
+#caja_alternar, #repetir{
+    margin-left: 12px;
+}
+
+#caja_reproductor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#caja_tiempo_inicial{
+    justify-content: flex-end;
+    color: #f50;
+}
+
+#caja_tiempo_final{
+    justify-content: flex-start;
+}
+
+#caja_tiempo_inicial, #caja_tiempo_final{
+    display: flex;
+    align-items: center;
+    height: 48px;
+    width: 46px;
+}
+
+#caja_tele{
+    padding: 0 4px;
+}
+
+#tele{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/tele.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 24px;
+    width: 34px;
+}
+
+#caja_sonido{
+    padding: 1px 6px;
+}
+
+    
+#caja_sonido{
+    display: flex;
+
+}
+
+#sonido{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/Sonido.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 46px;
+    width: 24px;
+    box-sizing: unset;
+    padding: 1px 6px;
+}
+
+#caja_sonando_ahora{
+    display: flex;
+    flex-direction: row;
+    width: 360px;
+    max-width: 100%;
+    padding: 0 8pxs;
+    justify-content: co;
+}
+
+#caja_perfil_cancion{
+    display: flex;
+    align-content: start;
+    padding: 10px;
+}
+
+#perfil_cancion{
+    display: flex;
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/Perfil.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 30px;
+    width: 30px;
+    box-sizing: unset;
+}
+
+#autor_y_titulo_cancion{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#autor{
+    display: flex;
+    font-size: 12px;
+    font-family: Inter, sans-serif;
+    height: 17px;
+}
+
+#titulo_cancion{
+    display: flex;
+    font-size: 12px;
+    font-family: Inter, sans-serif;
+    height: 17px;
+
+}
+
+#items_reproductor{
+    display: flex;
+    margin-left: 7px;
+    align-items: center;
+}
+
+/*#caja_like{
+    padding: 12px;
+}*/
+
+#like{
+    display: flex;
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/like.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+}
+
+/*#caja_seguir{
+    padding: 12px;
+}*/
+
+#seguir{
+    display: flex;
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/seguir.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+}
+
+/*#caja_abrir_en_reproduccion{
+    padding: 12px;
+
+}*/
+
+#abrir_en_reproduccion{
+    display: flex;
+    background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+    ),
+    url(src/en_reproduccion.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+}
+
+
+
+
